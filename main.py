@@ -1,6 +1,14 @@
-# Import necessary libraries
+# Import necessary libraries and functions
 import pandas as pd
 import numpy as np
+import find_averages
+import compare_vs_averages
+import find_selected_player
+import find_selected_player_comps
+import assign_comp_vals
+import assign_difference_scores
+import print_results
+
 
 # Read in data of MLB pitcher's statsitics from 2021 season
 pComps = pd.read_csv('https://raw.githubusercontent.com/jacklambert1/Pitcher-Comparison-Project/main/2021_pitcher_data.csv')
