@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def compare_vs_averages(pCompAvg, RHPaverages, LHPaverages):
     for row in pCompAvg.index:
         for column in pCompAvg:

@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def find_selected_player_comps(pCompAvg, chosenPlayerLoc):
     eligiblePlayerCompsList = []
     # For all data points in pCompAvg, copy them over to a list (eventually to be turned into a DataFrame) if the player of current iteration throws with the same hand as the selected player but is not the selected player

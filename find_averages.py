@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def find_averages(pComps, hand):
     data = []
     for row in pComps.index:

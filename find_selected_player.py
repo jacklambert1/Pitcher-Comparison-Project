@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def find_selected_player(pComps, chosenPlayerLoc):
     userPlayer = input('Enter an MLB pitcher''s name in the "Lastname, Firstname" format: ') # asks user to input player name in format consistent with pComps DataFrame
     # Iterate through all rows of pComps looking for the player the user named

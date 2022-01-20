@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def print_results(differenceScores, pComps, pitchInfo, chosenPlayerLoc, nComps):
     # Iterating through all columns of 'pitchInfo' allows for all values for each specific pitch to be referenced and changed
     # Note - each pitch type is represented by column name and each attribute of pitch type is represented by index value
