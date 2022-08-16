@@ -59,7 +59,7 @@ def fill_out_scores(data, master, multipliers, rhp_std, lhp_std):
         
         # Determine whether comparisons will be with R or L filters
         comp_data = master[master['hand'] == hand]
-        comp_data = master[master['player_id'] != master.at[player, 'player_id']]
+        comp_data = comp_data[comp_data['player_id'] != master.at[player, 'player_id']]
 
         # Iterate through all eligible comparison players
         for comp_player in comp_data.index:
