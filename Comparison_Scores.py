@@ -38,7 +38,7 @@ def find_multipliers(master, predictors):
 
     # Change multipliers to add up to 100
     for predictor in predictors:
-        multipliers[predictor] = (100.0 * multipliers[predictor]) / total_sum
+        multipliers[predictor] = multipliers[predictor] / total_sum
 
     return multipliers
 
