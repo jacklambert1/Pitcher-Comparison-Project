@@ -1,35 +1,14 @@
 # Pitcher-Comparison-Project
 
 ## Project Overview
-The goal of this project is to quantify a comparison between the "stuff" of any two pitches. This "stuff" refers to the raw characteristics of a pitch: velocity, spin rate, spin angle, movement, and release point. In depth writeup on project found here: [Comparison Scores Explained.pdf](https://github.com/jacklambert1/Pitcher-Comparison-Project/files/9382836/Comparison.Scores.Explained.pdf)
+The goal of this project is to quantify a comparison between the raw characteristics (velocity, spin rate, spin axis, movement, and release point) of any two pitches with comparison scores. These comparison scores can not only be utilized to predict success, but also give insights into specific approaches that are proven to be effective with the raw characteristics a pitch has. 
 
-## Script Overview
-- Main.py
-  - Once all scripts are downloaded, running Main.py will execute all of the scripts (other than Visualizations.ipynb) in the sequence they are meant to be executed in, scraping all data, compiling it into one CSV, creating comparison scores, and finalizing the master CSV
-- Scrape Scripts
-  - Pitch_Characteristics_Scrape.py
-    - scrapes all velocity, spin rate, movement, and release point data from https://baseballsavant.mlb.com/
-    - generates pitch_characteristics.csv
-  - Axis_Scrape.py
-    - scrapes all spin axis data from https://baseballsavant.mlb.com/
-    - generates axis.csv
-  - Run_Values.py
-    - scrapes all Run Value per 100 data from https://baseballsavant.mlb.com/
-    - generates run_values.csv
- - Compile_Data.py
-    - compiles all scraped data into a single CSV, with each row representing an individual pitch
-    - generates master.csv
- - Comparison_Scores.py
-    - creates multipliers for comparison and then comparisons for all relevant scores
-    - generates scores.csv
- - Final_Prep.py
-    - updates master.csv with uniqueness categorization values
-    - returns updated master.csv
- - Visualizations.ipynb
-    - creates all visuals and features other exploratory analysis used in [Comparison Scores Explained.pdf](https://github.com/jacklambert1/Pitcher-Comparison-Project/files/9382836/Comparison.Scores.Explained.pdf)
+Regarding the score itself, the smaller a score, the more similar two pitches are. The minimum score, 0, indicates two identical pitches (based on raw characteristics), and each score represents the average number of standard deviations two pitches differ by across all raw pitch characteristics considered. A full writeup of the project can be found here: [Comparison Scores Explained.pdf](https://github.com/jacklambert1/Pitcher-Comparison-Project/files/9382836/Comparison.Scores.Explained.pdf)
 
 ## Requirements
 - All scripts executed using Python 3.10.6
+  - Main.py compiles all data from https://baseballsavant.mlb.com/ and creates master.csv as well as scores.csv by calling the other scripts
+  - Visualizations.ipynb contains exploratory analysis of master.csv and scores.csv and all visualizations found in [Comparison Scores Explained.pdf](https://github.com/jacklambert1/Pitcher-Comparison-Project/files/9382836/Comparison.Scores.Explained.pdf)
 - Libraries used in Main.py:
   - urllib.request
   - re
@@ -45,3 +24,6 @@ The goal of this project is to quantify a comparison between the "stuff" of any 
   - colorama
   - sklearn
   - scipy
+
+## How it Works
+Execution of Main.py will trigger the sequence of events that compiles all of the comparison scores. Upon execution, the up-to-date velocity, spin, movement, release point, and pitch results data will be scraped from https://baseballsavant.mlb.com/. This data will be consolidated into the "master" CSV file with each row representing a distinct pitch. The "scores" CSV file will then be created, containing the comparison scores for all relevant pitches. Once these two CSV files are created, the user is able to explore master.csv and scores.csv for trends. Initial findings from these datasets are found here: [Comparison Scores Explained.pdf](https://github.com/jacklambert1/Pitcher-Comparison-Project/files/9382836/Comparison.Scores.Explained.pdf)
