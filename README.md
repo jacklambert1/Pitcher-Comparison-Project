@@ -1,4 +1,5 @@
 # Pitcher-Comparison-Project
+Author: Jack Lambert
 
 ## Project Overview
 The goal of this project is to quantify a comparison between the raw characteristics (velocity, spin rate, spin axis, movement, and release point) of any two pitches with comparison scores. These comparison scores can not only be utilized to predict success, but also give insights into specific approaches that are proven to be effective with the raw characteristics a pitch has. 
